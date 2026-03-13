@@ -1,48 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact | Kamalesh</title>
+<title>Contact | Kamalesh S</title>
 
 <link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("8RSB4xCRag_jxvGL_");
+})();
+</script>
 
 </head>
 
 <body>
 
-<nav>
+<h1>Contact Me</h1>
 
-<h1 class="logo">Kamalesh</h1>
-
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-
-</nav>
-
-<section class="contact">
-
-<h2>Contact Me</h2>
-
-<form action="https://formspree.io/f/mzzvqkya" method="POST">
+<form id="contact-form">
 
 <input type="text" name="name" placeholder="Your Name" required>
 
-<input type="email" name="email" placeholder="Email" required>
+<input type="email" name="email" placeholder="Your Email" required>
 
-<textarea name="message" placeholder="Message"></textarea>
+<textarea name="message" placeholder="Your Message" required></textarea>
 
-<button type="submit" class="btn">Send Message</button>
+<button type="submit">Send Message</button>
 
 </form>
 
-</section>
+<p id="status"></p>
+
+<script>
+
+document.getElementById("contact-form").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+emailjs.sendForm(
+"Kamalesh S",
+"template_e5lznbl",
+this
+)
+
+.then(function(){
+
+document.getElementById("status").innerText =
+"Message sent successfully!";
+
+}, function(){
+
+document.getElementById("status").innerText =
+"Failed to send message.";
+
+});
+
+});
+
+</script>
 
 </body>
+
 </html>
