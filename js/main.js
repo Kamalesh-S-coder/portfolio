@@ -1,17 +1,12 @@
-// Dark Light Mode
+document.addEventListener("DOMContentLoaded", function () {
 
 const toggle = document.getElementById("theme-toggle");
 
 if(toggle){
-
-toggle.onclick = () => {
+toggle.onclick = function(){
 document.body.classList.toggle("light");
 };
-
 }
-
-
-// GitHub Projects Loader
 
 const container = document.getElementById("project-container");
 
@@ -42,3 +37,5 @@ container.appendChild(card);
 });
 
 }
+
+});
