@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Kamalesh S | Developer Portfolio</title>
 
-<meta name="description" content="Kamalesh S portfolio. Web developer, Unity game developer and JavaScript developer showcasing projects and skills.">
-
-<meta name="keywords" content="Kamalesh, developer portfolio, JavaScript developer, Unity developer, web developer">
-
+<meta name="description" content="Kamalesh S - Frontend Developer, Web Developer and Game Developer Portfolio">
 <meta name="author" content="Kamalesh S">
 
-<meta property="og:title" content="Kamalesh S | Developer Portfolio">
-<meta property="og:description" content="Portfolio website showcasing my projects and skills.">
-<meta property="og:type" content="website">
-
 <link rel="stylesheet" href="css/style.css">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1THZ38S81"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Y1THZ38S81');
+</script>
 
 </head>
 
@@ -25,25 +27,24 @@
 
 <nav>
 
-<h1 class="logo">Kamalesh</h1>
+<h2 class="logo">Kamalesh</h2>
 
-<ul class="nav-links">
+<ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="projects.html">Projects</a></li>
 <li><a href="about.html">About</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
 
-<button id="theme-toggle">🌙</button>
+<button id="theme-toggle">Toggle Theme</button>
 
 </nav>
 
-
 <section class="hero">
 
-<h2>Hi, I'm Kamalesh S</h2>
+<h1>Hi, I'm Kamalesh S</h1>
 
-<p class="role">
+<p>
 Frontend Developer • Game Developer • Web Developer
 </p>
 
@@ -51,18 +52,20 @@ Frontend Developer • Game Developer • Web Developer
 HTML • CSS • JavaScript • PostgreSQL • Unity
 </p>
 
-<div class="buttons">
-
-<a href="projects.html" class="btn">🚀 View Projects</a>
-
-<a href="https://github.com/Kamalesh-S-coder" class="btn secondary">GitHub</a>
-
-</div>
+<a href="projects.html" class="btn">View Projects</a>
 
 </section>
 
+<section class="github-projects">
+
+<h2>My GitHub Projects</h2>
+
+<div id="project-container"></div>
+
+</section>
 
 <script src="js/main.js"></script>
 
 </body>
+
 </html>
